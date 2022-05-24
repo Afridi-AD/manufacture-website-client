@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BuyProduct = ({buy}) => {
+const BuyProduct = ({buy,setOrder}) => {
     const {name,available,minimum,perUnit,img,description} =buy
     return (
         <div class=" card w-96 bg-base-100 shadow-xl">
@@ -14,7 +14,10 @@ const BuyProduct = ({buy}) => {
           <p className='text-purple-500'>Minimum Order Unit : {minimum}</p>
           <p> <span className='text-green-500'>Description</span> : {description}</p>
           <div class="card-actions">
-            <button class="btn btn-primary">Buy Now</button>
+            
+            <label for="purchase-modal" 
+            onClick={()=>setOrder(buy)} 
+            class="btn btn-primary">Buy Now</label>
           </div>
         </div>
       </div>

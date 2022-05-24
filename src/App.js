@@ -5,6 +5,11 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth';
 import SignUp from './Pages/Login/SignUp';
+import Dashboard from './Pages/Purchase/Dashboard/Dashboard';
+import MyDashboard from './Pages/Purchase/Dashboard/MyDashboard';
+import Myorders from './Pages/Purchase/Dashboard/Myorders';
+import Myprofile from './Pages/Purchase/Dashboard/Myprofile';
+import MyReview from './Pages/Purchase/Dashboard/MyReview';
 import Purchase from './Pages/Purchase/Purchase';
 import Navber from './Pages/Shared/Navber';
 
@@ -21,6 +26,15 @@ function App() {
            <Purchase></Purchase>
          </RequireAuth>
        }></Route>
+       <Route path='/appointment' element={
+          <RequireAuth>
+            <MyDashboard></MyDashboard>
+          </RequireAuth>}></Route>
+          <Route path='/dashboard' element={<RequireAuth><Dashboard/></RequireAuth>}>
+            <Route index element= {<Myprofile></Myprofile>}></Route>
+            <Route path='review' element= {<MyReview></MyReview>}></Route>
+            <Route path='myOrder' element= {<Myorders></Myorders>}></Route>
+          </Route>
      </Routes>
     </div>
   );
