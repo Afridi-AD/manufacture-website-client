@@ -1,0 +1,83 @@
+[
+  {
+    "_id": "628b2beed9896d9646650d73",
+    "available": "5000",
+    "minimum": "800",
+    "perUnit": "$3,480.30",
+    "img": "https://i.ibb.co/ZYNXwFK/car2.png",
+    "name": "Perkins Mcpherson",
+    "description": "The heart and soul of your vehicle is the internal combustion engine. The engine block features parts such as the timing chain, camshaft, crankshaft, spark plugs, cylinder heads, valves and pistons.\r\n"
+  },
+  {
+    "_id": "628b2bee9241c91df60c6c45",
+    "available": "4000",
+    "minimum": "1000",
+    "perUnit": "$3,222.76",
+    "img": "https://i.ibb.co/MN8NTPN/car3.png",
+    "name": "Wooten Bryant",
+    "description": "The battery delivers the electricity needed to run your vehicle’s electrical components. Without a battery, your car won’t run.\r\n"
+  },
+  {
+    "_id": "628b2bee65439019aac6350a",
+    "available": "5000",
+    "minimum": "500",
+    "perUnit": "$3,183.79",
+    "img": "https://i.ibb.co/gRBzqqn/car5.jpg",
+    "name": "Frankie Dean",
+    "description": "Part of the suspension system, the front axle is where the front wheel hubs are attached.\r\n"
+  },
+  {
+    "_id": "628b2beec4b39171a0dd575f",
+    "available": "6000",
+    "minimum": "500",
+    "perUnit": "$3,909.64",
+    "img": "https://i.ibb.co/bQv0zDt/car6.png",
+    "name": "Calhoun Sampson",
+    "description": "Helps improve the ride and handling of the vehicle. Though systems vary in makeup.\r\n"
+  },
+  {
+    "_id": "628b2bee894a81287b5428dd",
+    "available": "5000",
+    "minimum": "1000",
+    "perUnit": "$1,608.77",
+    "img": "https://i.ibb.co/Zgmc6YX/car7.png",
+    "name": "Coleman Nunez",
+    "description": "Keeps the exhaust system quiet through the use of baffles or other materials that reduce or muffle the sound.\r\n"
+  },
+  {
+    "_id": "628b2beec1ca91fd82009a25",
+    "available": "6000",
+    "minimum": "500",
+    "perUnit": "$2,652.69",
+    "img": "https://i.ibb.co/LkNP3MW/car8.png",
+    "name": "Schneider Lindsay",
+    "description": "Pariatur eiusmod anim nulla ipsum. In eiusmod id aliquip ex. Eiusmod et irure Lorem aute et adipisicing incididunt. Est adipisicing dolore consectetur ullamco labore et dolore. Labore excepteur elit cillum cillum officia eiusmod minim sunt eiusmod pariatur velit. Fugiat enim ea incididunt quis aute enim proident exercitation labore elit enim. Cillum ea consectetur eu ea anim ut do aliquip.\r\n"
+  },
+  {
+    "_id": "628b2bee1ed2091e42acde72",
+    "available": "4000",
+    "minimum": "1500",
+    "perUnit": "$2,841.11",
+    "img": "https://i.ibb.co/VWgPK4b/car9.png",
+    "name": "Gilmore Huffman",
+    "description": "Carries exhaust fumes from the muffler to outside of the vehicle.\r\n"
+  },
+  {
+    "_id": "628b2beefb6fe592c8b51800",
+    "available": "7000",
+    "minimum": "1500",
+    "perUnit": "$3,064.01",
+    "img": "https://i.ibb.co/S36vC6g/car10.png",
+    "name": "Leblanc Tanner",
+    "description": "Key part of the suspension system to which the rear wheels are mounted.\r\n"
+  },
+  {
+    "_id": "628b2bee8f2682239be31c39",
+    "available": "6000",
+    "minimum": "1000",
+    "perUnit": "$3,023.34",
+    "img": "https://i.ibb.co/rv8ySyZ/car12.png",
+    "name": "Judy Morris",
+    "description": "As with the front suspension, the rear suspension contributes to the handling and ride quality of the vehicle. Systems can vary, but they usually are made up of shocks,.\r\n"
+  }
+]
