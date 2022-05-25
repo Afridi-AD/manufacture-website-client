@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const MyDashboard = () => {
+    
     return (
-        <div>
-           <h1>My dashboard</h1> 
-        </div>
+       <div> <h1> nY assas</h1></div>
     );
 };
 
