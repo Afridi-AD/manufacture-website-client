@@ -12,6 +12,10 @@ import Myprofile from './Pages/Purchase/Dashboard/Myprofile';
 import MyReview from './Pages/Purchase/Dashboard/MyReview';
 import Purchase from './Pages/Purchase/Purchase';
 import Navber from './Pages/Shared/Navber';
+import { ToastContainer,  } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Blog from './Pages/Blog/Blog';
+
 
 function App() {
   return (
@@ -35,7 +39,9 @@ function App() {
             <Route path='review' element= {<MyReview></MyReview>}></Route>
             <Route path='myOrder' element= {<Myorders></Myorders>}></Route>
           </Route>
+          <Route path='/blog' element ={<Blog></Blog>}></Route>
      </Routes>
+     <ToastContainer />
     </div>
   );
 }

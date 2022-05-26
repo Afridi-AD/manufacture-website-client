@@ -21,7 +21,10 @@ const Purchase = () => {
               ></BuyProduct>)  
             }
             </div>
-         { order && <PurchaseModal order={order} ></PurchaseModal>}
+         { order && <PurchaseModal 
+         order={order}
+         setOrder={setOrder}
+          ></PurchaseModal>}
         </div>
     );
 };

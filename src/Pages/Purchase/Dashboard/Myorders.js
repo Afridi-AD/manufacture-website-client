@@ -4,17 +4,17 @@ import auth from '../../../firebase.init';
 
 const Myorders = () => {
     const [user, loading, error] = useAuthState(auth);
-    const [appointments, setAppointments] = useState([]);
+    const [cOrder, setCOrder] = useState([]);
     useEffect(()=>{
         if(user){
             fetch(`http://localhost:5000/booking?paitent=${user.email}`)
             .then(res=>res.json())
-            .then(data=> setAppointments(data)); 
+            .then(data=> setCOrder(data)); 
         }
     },[user])
     return (
         <div>
-        <h2>My Order {appointments.length}</h2> 
+        <h2>My Order {cOrder.length}</h2> 
         <div class="overflow-x-auto">
 <table class="table w-full">
  
@@ -29,7 +29,7 @@ const Myorders = () => {
  </thead>
  <tbody>
    {
-       appointments.map((a , index)=><tr>
+       cOrder.map((a , index)=><tr>
          <th>{index +1}</th>
          <td>{a.patientName}</td>
          <td>{a.date}</td>
