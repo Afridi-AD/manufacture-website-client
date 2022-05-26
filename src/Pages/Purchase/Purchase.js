@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
+import Spinner from '../Shared/Spinner';
 import BuyProduct from './BuyProduct';
 import PurchaseModal from './PurchaseModal';
 
 const Purchase = () => {
-    const [buys, setBuy] = useState([]);
+    
     const [order,setOrder] =useState(null);
-    useEffect(() => {
-        fetch('http://localhost:5000/products')
+
+    const {data :buys,isLoading} = useQuery('product', ()=>fetch('http://localhost:5000/products')
             .then(res => res.json())
-            .then(data => setBuy(data));
-    }, [])
+            )
+            if(isLoading){
+              return <Spinner></Spinner>
+            }
+ 
     return (
         <div >
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>

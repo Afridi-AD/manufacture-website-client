@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BuyProduct = ({buy,setOrder}) => {
-    const {name,available,minimum,perUnit,img,description} =buy
+    const {name,available,minimum,perUnit,img,description} =buy;
     return (
         <div class=" card w-96 bg-base-100 shadow-xl">
         <figure class="px-10 pt-10">

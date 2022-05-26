@@ -15,6 +15,7 @@ import Navber from './Pages/Shared/Navber';
 import { ToastContainer,  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Blog from './Pages/Blog/Blog';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path='myOrder' element= {<Myorders></Myorders>}></Route>
           </Route>
           <Route path='/blog' element ={<Blog></Blog>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
      <ToastContainer />
     </div>

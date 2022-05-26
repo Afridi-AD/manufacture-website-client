@@ -31,7 +31,7 @@ const PurchaseModal = ({order,setOrder}) => {
         toast(`Order is set ,${name}`)
       }
       else{
-        toast(`You already have an order ,${name}`)
+        toast.error(`You already have an order ,${name}`)
       }
     setOrder(null);
     })
