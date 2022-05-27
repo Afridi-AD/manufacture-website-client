@@ -47,9 +47,9 @@ const PurchaseModal = ({deleteModal,setDeleteModal,refetch}) => {
     <input type="text" name= "name" value={name}  class="input input-bordered w-full max-w-xs" disabled />
     <input type="text" name= "name" value={user?.displayName || ''}  class="input input-bordered w-full max-w-xs" disabled  />
     <input type="email" name='email' value={user?.email || ''} placeholder="Email" class="input input-bordered w-full max-w-xs" disabled  />
-    <input type="number" name='quantity' placeholder="Order Quantity" class="input input-bordered w-full max-w-xs" />
-    <input type="text" name='phone' placeholder="Phone number" class="input input-bordered w-full max-w-xs" />
-    <input type="text" name='address' placeholder="Address" class="input input-bordered w-full max-w-xs" />
+    <input type="number" name='quantity' placeholder="Order Quantity" class="input input-bordered w-full max-w-xs" required />
+    <input type="text" name='phone' placeholder="Phone number" class="input input-bordered w-full max-w-xs" required />
+    <input type="text" name='address' placeholder="Address" class="input input-bordered w-full max-w-xs" required />
     
     <input type="submit" value="Place Order" class="btn btn-secondary w-full max-w-xs" />
     </form>

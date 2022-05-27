@@ -26,7 +26,7 @@ const Myorders = () => {
     },[user])
     return (
         <div>
-        <h2>My Order {cOrder.length}</h2> 
+        <h2 className='mb-2'>My Orders</h2> 
         <div class="overflow-x-auto">
 <table class="table w-full">
  
