@@ -7,9 +7,21 @@ const Myorders = () => {
     const [cOrder, setCOrder] = useState([]);
     useEffect(()=>{
         if(user){
-            fetch(`http://localhost:5000/booking?paitent=${user.email}`)
-            .then(res=>res.json())
-            .then(data=> setCOrder(data)); 
+            fetch(`http://localhost:5000/booking?order=${user.email}`,{
+              method : 'GET',
+              headers :{
+                'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
+              }
+            })
+            .then(res=>{
+              console.log('res,', res)
+              return res.json()
+              
+            })
+            .then(data=> {
+              setCOrder(data);
+            
+            }); 
         }
     },[user])
     return (

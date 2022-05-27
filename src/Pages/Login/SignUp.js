@@ -32,7 +32,7 @@ const SignUp = () => {
 
     if (token) {
         console.log( user || gUser);
-        navigate('/appointment');
+        navigate('/purchase');
     }
     const onSubmit = async data => {
         console.log(data);

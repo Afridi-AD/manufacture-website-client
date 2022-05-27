@@ -9,6 +9,7 @@ const Navber = () => {
     const [user, loading, error] = useAuthState(auth);
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken');
       };
 
     const menuItems = <>
@@ -16,9 +17,10 @@ const Navber = () => {
     <li><Link to="/purchase">Purchase</Link></li>
     <li><Link to="/review">Review</Link></li>
     <li><Link to="/contact">Contact</Link></li>
-    <li><Link to="/about">About</Link></li>
+    <li><Link to="/about">My profile</Link></li>
     <li><Link to="/login">Login</Link></li>
     <li><Link to="/blog">Blog</Link></li>
+    
 
     {
             user && <li><Link to='/dashboard' >Dashboard </Link></li>

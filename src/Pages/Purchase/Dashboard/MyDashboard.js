@@ -5,7 +5,7 @@ import auth from '../../../firebase.init';
 const MyDashboard = () => {
     
     return (
-       <div> <h1> nY assas</h1></div>
+       <div> <h1> My Appointments</h1></div>
     );
 };
 
