@@ -3,9 +3,9 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 
-const PurchaseModal = ({order,setOrder}) => {
-  const { _id,name,} =order;
-  const {user,loading, error} = useAuthState(auth);
+const PurchaseModal = ({deleteModal,setDeleteModal,refetch}) => {
+  const { _id,name,} =deleteModal;
+  const [user] = useAuthState(auth);
 
   const handleOrder = event =>{
     event.preventDefault()
@@ -13,11 +13,13 @@ const PurchaseModal = ({order,setOrder}) => {
    const orders = {
       orderId : _id,
       order : name,
-      name : user.email,
+      email : user.email,
       customerName : user.displayName,
-      phone : event.target.phone.value
+      quantity : event.target.quantity.value,
+      phone : event.target.phone.value,
+      address : event.target.address.value
     }
-    fetch('http://localhost:5000/',{
+    fetch('http://localhost:5000/order',{
       method : 'POST',
       headers :{
         'content-type' : 'application/json'
@@ -27,13 +29,11 @@ const PurchaseModal = ({order,setOrder}) => {
     })
     .then(res=> res.json())
     .then(data =>{
-      if(data.success){
+      
         toast(`Order is set ,${name}`)
-      }
-      else{
-        toast.error(`You already have an order ,${name}`)
-      }
-    setOrder(null);
+      
+      refetch();
+      setDeleteModal(null);
     })
    
   }
@@ -42,13 +42,16 @@ const PurchaseModal = ({order,setOrder}) => {
            <input type="checkbox" id="purchase-modal" class="modal-toggle" />
 <div class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
-    <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
+    <h3 class="font-bold text-lg">You Can Order here !!</h3>
     <form onSubmit={handleOrder} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
-    <input type="text" name= "name" value={user?.displayName || ''} placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-    <input type="email" name='email' value={user?.email || ''} placeholder="Email" class="input input-bordered w-full max-w-xs" />
-    <input type="text" name='phone' placeholder="phone number" class="input input-bordered w-full max-w-xs" />
-    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-    <input type="submit" value="submit" class="btn btn-secondary w-full max-w-xs" />
+    <input type="text" name= "name" value={name}  class="input input-bordered w-full max-w-xs" disabled />
+    <input type="text" name= "name" value={user?.displayName || ''}  class="input input-bordered w-full max-w-xs" disabled  />
+    <input type="email" name='email' value={user?.email || ''} placeholder="Email" class="input input-bordered w-full max-w-xs" disabled  />
+    <input type="number" name='quantity' placeholder="Order Quantity" class="input input-bordered w-full max-w-xs" />
+    <input type="text" name='phone' placeholder="Phone number" class="input input-bordered w-full max-w-xs" />
+    <input type="text" name='address' placeholder="Address" class="input input-bordered w-full max-w-xs" />
+    
+    <input type="submit" value="Place Order" class="btn btn-secondary w-full max-w-xs" />
     </form>
     
   </div>

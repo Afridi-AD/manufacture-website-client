@@ -6,9 +6,9 @@ import PurchaseModal from './PurchaseModal';
 
 const Purchase = () => {
     
-    const [order,setOrder] =useState(null);
-
-    const {data :buys,isLoading} = useQuery('product', ()=>fetch('http://localhost:5000/products')
+    const [deleteModal,setDeleteModal] =useState(null);
+  
+    const {data :buys,isLoading,refetch} = useQuery('product', ()=>fetch('http://localhost:5000/products')
             .then(res => res.json())
             )
             if(isLoading){
@@ -22,13 +22,14 @@ const Purchase = () => {
               buys.map(buy=><BuyProduct
                 key={buy._id}
                 buy ={buy}
-                SetOrder ={setOrder}
+                setDeleteModal ={setDeleteModal}
               ></BuyProduct>)  
             }
             </div>
-         { order && <PurchaseModal 
-         order={order}
-         setOrder={setOrder}
+         { deleteModal && <PurchaseModal 
+         deleteModal={deleteModal}
+         refetch={refetch}
+         setDeleteModal={setDeleteModal}
           ></PurchaseModal>}
         </div>
     );

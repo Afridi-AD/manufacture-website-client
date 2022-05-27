@@ -7,7 +7,7 @@ const Myorders = () => {
     const [cOrder, setCOrder] = useState([]);
     useEffect(()=>{
         if(user){
-            fetch(`http://localhost:5000/booking?order=${user.email}`,{
+            fetch('http://localhost:5000/order',{
               method : 'GET',
               headers :{
                 'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
@@ -32,21 +32,24 @@ const Myorders = () => {
  
  <thead>
    <tr>
-     <th></th>
+     <th>sl</th>
      <th>Name</th>
-     <th>Date</th>
-     <th>Time</th>
-     <th>Treatment</th>
+     <th>Email</th>
+     <th>Address</th>
+     <th>Quantity</th>
+     <th>Phone</th>
    </tr>
  </thead>
  <tbody>
    {
        cOrder.map((a , index)=><tr>
          <th>{index +1}</th>
-         <td>{a.patientName}</td>
-         <td>{a.date}</td>
-         <td>{a.slot}</td>
-         <td>{a.treatment}</td>
+         
+         <td>{a.customerName}</td>
+         <td>{a.email}</td>
+         <td>{a.address}</td>
+         <td>{a.quantity}</td>
+         <td>{a.phone}</td>
        </tr>)
    }
    
