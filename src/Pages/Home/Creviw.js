@@ -14,7 +14,7 @@ const Creviw = () => {
           img : event.target.imgUrl.value,
           review : event.target.comments.value
         }
-        fetch('http://localhost:5000/review',{
+        fetch('https://infinite-island-55718.herokuapp.com/review',{
           method : 'POST',
           headers :{
             'content-type' : 'application/json'

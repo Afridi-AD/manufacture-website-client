@@ -10,7 +10,7 @@ const CustomerReview = () => {
     const [cReviews, setReview] = useState([]);
     useEffect(()=>{
         if(user){
-            fetch('http://localhost:5000/review',{
+            fetch('https://infinite-island-55718.herokuapp.com/review',{
               method : 'GET',
               headers :{
                 'authorization' : `Bearer ${localStorage.getItem('accessToken')}`

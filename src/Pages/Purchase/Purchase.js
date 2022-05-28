@@ -8,7 +8,7 @@ const Purchase = () => {
     
     const [deleteModal,setDeleteModal] =useState(null);
   
-    const {data :buys,isLoading,refetch} = useQuery('product', ()=>fetch('http://localhost:5000/products')
+    const {data :buys,isLoading,refetch} = useQuery('product', ()=>fetch('https://infinite-island-55718.herokuapp.com/products')
             .then(res => res.json())
             )
             if(isLoading){

@@ -19,7 +19,7 @@ const PurchaseModal = ({deleteModal,setDeleteModal,refetch}) => {
       phone : event.target.phone.value,
       address : event.target.address.value
     }
-    fetch('http://localhost:5000/order',{
+    fetch('https://infinite-island-55718.herokuapp.com/order',{
       method : 'POST',
       headers :{
         'content-type' : 'application/json'

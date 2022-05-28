@@ -7,7 +7,7 @@ const Myorders = () => {
     const [cOrder, setCOrder] = useState([]);
     useEffect(()=>{
         if(user){
-            fetch('http://localhost:5000/order',{
+            fetch('https://infinite-island-55718.herokuapp.com/order',{
               method : 'GET',
               headers :{
                 'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
