@@ -3,8 +3,9 @@ import { toast } from 'react-toastify';
 
 const UserRow = ({ user,refetch }) => {
     const { email,role } = user;
+    console.log(user);
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin${email}`,{
+        fetch(`http://localhost:5000/user/admin/${email}`,{
             method : 'PUT',
             headers :{
                authorization : `Bearer ${localStorage.getItem('accessToken')}`

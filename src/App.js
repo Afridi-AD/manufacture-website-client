@@ -19,6 +19,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Users from './Pages/Purchase/Dashboard/Users';
 import About from './Pages/Home/About/About';
 import RequireAdmin from './Pages/Login/RequireAdmin';
+import Creviw from './Pages/Home/Creviw';
 
 
 function App() {
@@ -42,10 +43,11 @@ function App() {
             <Route index element= {<Myprofile></Myprofile>}></Route>
             <Route path='review' element= {<MyReview></MyReview>}></Route>
             <Route path='myOrder' element= {<Myorders></Myorders>}></Route>
-            <Route path='user' element= {<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+            <Route path='user' element= {<Users></Users>}></Route>
           </Route>
           <Route path='/blog' element ={<Blog></Blog>}></Route>
           <Route path='/about' element ={<About></About>}></Route>
+          <Route path='/review' element ={<Creviw></Creviw>}></Route>
 
           <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>

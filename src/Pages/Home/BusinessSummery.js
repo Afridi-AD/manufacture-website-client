@@ -28,7 +28,7 @@ const BusinessSummery = () => {
       <div class="stat-figure text-secondary">
         <div class="avatar online">
           <div class="w-16 rounded-full">
-            <img src="https://api.lorem.space/image/face?w=128&h=128" />
+            <img src="https://i.ibb.co/hXQHfPh/customer.jpg" />
           </div>
         </div>
       </div>

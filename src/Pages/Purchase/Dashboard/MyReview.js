@@ -1,10 +1,22 @@
 import React from 'react';
 
 const MyReview = () => {
+    const reviews =[
+       { _id :1,
+        name : 'name',
+        review :'kdfdfdfd',
+        
+    }
+    ]
     return (
-        <div>
-            <h1>This is my review</h1>
-        </div>
+        <section>
+            <div>
+           <h3 className="text-xl text-secondary font-bold">Customer Review</h3>
+            </div>
+            <div>
+
+            </div>
+        </section>
     );
 };
 
